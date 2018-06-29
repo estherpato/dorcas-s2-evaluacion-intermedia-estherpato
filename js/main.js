@@ -16,16 +16,18 @@ var button = document.querySelector('.button');
 // Coger el texto del input! - Paso 3
 var numberFromUser = document.querySelector('.input');
 
+var feedback = document.querySelector('.feedback');
+
 function numberUserIntroduces() {
   console.log('Has elegido', numberFromUser.value);
   var numberToCompare = parseInt(numberFromUser.value);
 
   if (numberToCompare > randomNumber) {
-    alert('Te has pasado!');
+    feedback.innerHTML = '¡Te has pasado, fiera!';
   } else if (numberToCompare < randomNumber ) {
-    alert('No llegas...Dale calor');
+    feedback.innerHTML = 'No llegas... dale calor';
   } else if (numberToCompare === randomNumber) {
-    alert('SIIIIII ERES UNA CRACK!');
+    feedback.innerHTML = 'SIIIIII ERES UNA CRACK!';
   }
 
 }
