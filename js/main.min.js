@@ -18,6 +18,16 @@ var numberFromUser = document.querySelector('.input');
 
 function numberUserIntroduces() {
   console.log('Has elegido', numberFromUser.value);
+  var numberToCompare = parseInt(numberFromUser.value);
+
+  if (numberToCompare > randomNumber) {
+    alert('Te has pasado!');
+  } else if (numberToCompare < randomNumber ) {
+    alert('No llegas...Dale calor');
+  } else if (numberToCompare === randomNumber) {
+    alert('SIIIIII ERES UNA CRACK!');
+  }
+
 }
 
 button.addEventListener('click', numberUserIntroduces);
