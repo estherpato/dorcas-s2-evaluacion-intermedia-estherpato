@@ -9,4 +9,18 @@ body {
   background-color: lightblue;
 }
 
+.form,.feedback {
+  border: 1px solid black;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.contador {
+  border: 1px solid red;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
 /*# sourceMappingURL=main.css.map */
