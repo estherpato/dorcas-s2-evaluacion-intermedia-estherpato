@@ -30,11 +30,16 @@ function play() {
     feedback.innerHTML = 'No llegas... dale calor';
   } else if (numberToCompare === randomNumber) {
     feedback.innerHTML = 'SIIIIII ERES UNA CRACK!';
+  } else if (numberToCompare > 100) {
+    feedback.innerHTML = 'Introduce un número menor que 100';
+  } else if (numberToCompare < 1) {
+    feedback.innerHTML = 'Introduce un número mayor que 1';
+  } else {
+    feedback.innerHTML = 'Introduce un número entre 1 y 100';
   }
-
+  //Contador
   counter = counter + 1;
   counterDiv.innerHTML = counter;
-
 }
 
 button.addEventListener('click', play);
