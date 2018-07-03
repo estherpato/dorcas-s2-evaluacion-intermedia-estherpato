@@ -18,28 +18,33 @@ function getRandomNumber(max) {
 randomNumber = parseInt(getRandomNumber(100));
 console.log('> ', randomNumber);
 
+// Función Contador
+function counterUp() {
+  counter = counter + 1;
+  counterDiv.innerHTML = counter;
+}
 
 // Función que va a comparar el número random con el número del usuario, y le devolverá feedback + contador
 function play() {
   console.log('Has elegido', numberFromUser.value);
 
   numberToCompare = parseInt(numberFromUser.value);
-  if (numberToCompare > randomNumber) {
-    feedback.innerHTML = '¡Te has pasado, fiera!';
-  } else if (numberToCompare < randomNumber ) {
-    feedback.innerHTML = 'No llegas... dale calor';
-  } else if (numberToCompare === randomNumber) {
-    feedback.innerHTML = 'SIIIIII ERES UNA CRACK!';
-  } else if (numberToCompare > 100) {
+  if (numberToCompare > 100) {
     feedback.innerHTML = 'Introduce un número menor que 100';
   } else if (numberToCompare < 1) {
     feedback.innerHTML = 'Introduce un número mayor que 1';
+  } else if (numberToCompare === randomNumber) {
+    feedback.innerHTML = 'SIIIIII ERES UNA CRACK!';
+  } else if (numberToCompare > randomNumber) {
+    feedback.innerHTML = '¡Te has pasado, fiera!';
+  } else if (numberToCompare < randomNumber) {
+    feedback.innerHTML = 'No llegas... dale calor';
   } else {
     feedback.innerHTML = 'Introduce un número entre 1 y 100';
   }
+
   //Contador
-  counter = counter + 1;
-  counterDiv.innerHTML = counter;
+  counterUp();
 }
 
 button.addEventListener('click', play);
